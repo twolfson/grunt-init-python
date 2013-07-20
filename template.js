@@ -35,7 +35,6 @@ exports.template = function(grunt, init, done) {
 
   init.process({type: 'node'}, [
     // Prompt for these values.
-    init.prompt('gittip_username'),
     init.prompt('name'),
     init.prompt('description'),
     init.prompt('version'),
@@ -46,6 +45,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
+    init.prompt('gittip_username'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
     init.prompt('npm_test', 'mocha'),
