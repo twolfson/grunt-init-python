@@ -27,8 +27,15 @@ exports.warnOn = '*';
 // The actual init template.
 exports.template = function(grunt, init, done) {
 
+
+  init.prompts.gittip_username = {
+    name: 'gittip_username',
+    message: 'Gittip username (adds Gittip badge)'
+  };
+
   init.process({type: 'node'}, [
     // Prompt for these values.
+    init.prompt('gittip_username'),
     init.prompt('name'),
     init.prompt('description'),
     init.prompt('version'),
@@ -39,10 +46,6 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
-    {
-      name: 'gittip_username',
-      message: 'Gittip username (adds Gittip badge)'
-    },
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
     init.prompt('npm_test', 'mocha'),
