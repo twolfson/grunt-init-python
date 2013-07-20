@@ -1,4 +1,4 @@
-# {%= name %} [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
+# {%= name %} {% if (gittip_username) { %} [![Donate on Gittip](http://badgr.co/gittip/{%= gittip_username %}.png)](https://www.gittip.com/{%= gittip_username %}/) {% } %}
 
 {%= description %}
 
