@@ -6,13 +6,11 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
-
 // Basic template description.
-exports.description = 'Create a Node.js module, including Nodeunit unit tests.';
+exports.description = 'Create a Node.js module, including mocha unit tests.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes = '_Project name_ shouldn\'t contain "node" or "js" and should ' +
+exports.notes = '_Project name_ shouldn\'t contain \'node\' or \'js\' and should ' +
   'be a unique ID not already in use at search.npmjs.org.';
 
 // Template-specific notes to be displayed after question prompts.
@@ -43,27 +41,41 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
-    init.prompt('npm_test', 'grunt nodeunit'),
+    init.prompt('npm_test', 'mocha'),
     {
-      name: 'travis',
-      message: 'Will this project be tested with Travis CI?',
-      default: 'Y/n',
-      warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
-    },
+      name: 'keywords',
+      message: 'What keywords relate to this plugin (comma separated)?'
+    }
+    // {
+    //   name: 'travis',
+    //   message: 'Will this project be tested with Travis CI?',
+    //   default: 'Y/n',
+    //   warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
+    // }
   ], function(err, props) {
-    props.keywords = [];
+    // Set up dependencies
+    props.dependencies = {};
     props.devDependencies = {
+      'mocha': '~1.11.0',
       'grunt-contrib-jshint': '~0.6.0',
-      'grunt-contrib-nodeunit': '~0.2.0',
-      'grunt-contrib-watch': '~0.4.0',
+      'grunt-contrib-watch': '~0.4.0'
     };
-    // TODO: compute dynamically?
-    props.travis = /y/i.test(props.travis);
-    props.travis_node_version = '0.10';
+    // // TODO: compute dynamically?
+    // props.travis = /y/i.test(props.travis);
+    // props.travis_node_version = '0.10';
+
+    // Break up the keywords by commas
+    var keywords = props.keywords;
+    keywords = keywords ? keywords.split(',') : [];
+
+    // Trim each keyword and save
+    keywords = keywords.map(function (str) {
+      return str.trim();
+    });
+    props.keywords = keywords;
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
-    if (!props.travis) { delete files['.travis.yml']; }
 
     // Add properly-named license files.
     init.addLicenseFiles(files, props.licenses);
