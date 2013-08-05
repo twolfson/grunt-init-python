@@ -17,7 +17,7 @@ _(Coming soon)_
 _(Coming soon)_
 {% if (gittip_username) { %}
 ## Donating
-Donations are accepted via [Gittip][gittip].
+Support this project and [others by {%= gittip_username %}][gittip] via [gittip][].
 
 [![Support via Gittip][gittip-badge]][gittip]
 

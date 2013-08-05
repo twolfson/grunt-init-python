@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.2.2 - More tweaks to phrasing
+
 0.2.1 - Corrected phrasing for Gittip badge
 
 0.2.0 - Updated Gittip badge to larger format
