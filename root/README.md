@@ -19,7 +19,7 @@ _(Coming soon)_
 ## Donating
 Donations are accepted via [Gittip][gittip].
 
-[![Donate on Gittip][gittip-badge]][gittip]
+[![Support via Gittip][gittip-badge]][gittip]
 
 [gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png
 [gittip]: https://www.gittip.com/{%= gittip_username %}/
