@@ -15,7 +15,6 @@ _(Coming soon)_
 
 ## Examples
 _(Coming soon)_
-
 {% if (gittip_username) { %}
 ## Donating
 Donations are accepted via [Gittip][gittip].
@@ -24,7 +23,6 @@ Donations are accepted via [Gittip][gittip].
 
 [gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png
 [gittip]: https://www.gittip.com/{%= gittip_username %}/
-
 {% } %}
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
