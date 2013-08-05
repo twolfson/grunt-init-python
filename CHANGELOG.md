@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.2.3 - Use bleeding edge gittip-badge
+
 0.2.2 - More tweaks to phrasing
 
 0.2.1 - Corrected phrasing for Gittip badge
