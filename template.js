@@ -96,7 +96,7 @@ exports.template = function(grunt, init, done) {
 
     // If an unlicense was found, add it to output
     if (unlicenseExists) {
-      files['UNLICENSE'] = grunt.file.read(__dirname + '/licenses/UNLICENSE');
+      files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
     }
 
     // Add properly-named license files.
