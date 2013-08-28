@@ -41,7 +41,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('bugs'),
-    init.prompt('licenses'),
+    init.prompt('licenses', 'Unlicense'),
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
@@ -83,6 +83,21 @@ exports.template = function(grunt, init, done) {
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
+
+    // If the licenses contain an Unlicense, pluck it
+    var unlicenseExists = false;
+    props.licenses = props.licenses.filter(function (license) {
+      if (license.match(/^Unlicense$/i)) {
+        unlicenseExists = true;
+        return false;
+      }
+      return true;
+    });
+
+    // If an unlicense was found, add it to output
+    if (unlicenseExists) {
+      files['UNLICENSE'] = grunt.file.read(__dirname + '/licenses/UNLICENSE');
+    }
 
     // Add properly-named license files.
     init.addLicenseFiles(files, props.licenses);
