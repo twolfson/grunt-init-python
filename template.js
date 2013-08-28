@@ -87,7 +87,7 @@ exports.template = function(grunt, init, done) {
     // If the licenses contain an Unlicense, pluck it
     props.unlicense = props.licenses.filter(function (license) {
       return license.match(/^Unlicense$/i);
-    });
+    })[0];
 
     // If an unlicense was found, add it to output
     if (props.unlicense) {
