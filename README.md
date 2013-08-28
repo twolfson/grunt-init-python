@@ -9,7 +9,9 @@ This is a personal fork from https://github.com/gruntjs/grunt-init-node. Highlig
 - Prompt for keywords
 - Include gittip badge
 - Removed Travis CI badge for now (will prob come back when I decide to start using Travis religiously)
+- Added [UNLICENSE][unlicense-site] to available licenses (default)
 
+[unlicense-site]: http://unlicense.org/
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
 ## Installation
