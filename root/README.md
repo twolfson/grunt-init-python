@@ -28,6 +28,14 @@ Support this project and [others by {%= gittip_username %}][gittip] via [gittip]
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
 
 ## License
+{% if (licenses.length) { %}
 Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
 
 Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
+{% } else if (unlicense) { %}
+As of {%= grunt.template.today('mm dd, yyyy') %}, {%= author_name %} has released this repository and its contents to the public domain.
+
+It has been released under the [UNLICENSE][].
+
+[UNLICENSE]: UNLICENSE
+{% } %}

@@ -85,18 +85,14 @@ exports.template = function(grunt, init, done) {
     var files = init.filesToCopy(props);
 
     // If the licenses contain an Unlicense, pluck it
-    var unlicenseExists = false;
-    props.licenses = props.licenses.filter(function (license) {
-      if (license.match(/^Unlicense$/i)) {
-        unlicenseExists = true;
-        return false;
-      }
-      return true;
+    props.unlicense = props.licenses.filter(function (license) {
+      return license.match(/^Unlicense$/i);
     });
 
     // If an unlicense was found, add it to output
-    if (unlicenseExists) {
+    if (props.unlicense) {
       files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
+      props.licenses = [];
     }
 
     // Add properly-named license files.
