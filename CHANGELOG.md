@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.3.1 - Corrected trailing README whitespace
+
 0.3.0 - Added Unlicense and set it as default
 
 0.2.3 - Use bleeding edge gittip-badge
