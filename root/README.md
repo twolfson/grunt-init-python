@@ -30,12 +30,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## License
 Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
 
-Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
-{% } else if (unlicense) { %}
+Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.{% } else if (unlicense) { %}
 ## Unlicense
 As of {%= grunt.template.today('mmm dd yyyy') %}, {%= author_name %} has released this repository and its contents to the public domain.
 
 It has been released under the [UNLICENSE][].
 
-[UNLICENSE]: UNLICENSE
-{% } %}
+[UNLICENSE]: UNLICENSE{% } %}
