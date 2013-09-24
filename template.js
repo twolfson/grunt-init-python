@@ -64,6 +64,7 @@ exports.template = function(grunt, init, done) {
     props.dependencies = {};
     props.devDependencies = {
       'mocha': '~1.11.0',
+      'grunt': '~0.4.1',
       'grunt-contrib-jshint': '~0.6.0',
       'grunt-contrib-watch': '~0.4.0'
     };
@@ -92,11 +93,11 @@ exports.template = function(grunt, init, done) {
     // If an unlicense was found, add it to output
     if (props.unlicense) {
       files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
-      props.licenses = [];
+      props.licenses = ['UNLICENSE'];
+    } else {
+      // Add properly-named license files.
+      init.addLicenseFiles(files, props.licenses);
     }
-
-    // Add properly-named license files.
-    init.addLicenseFiles(files, props.licenses);
 
     // Actually copy (and process) files.
     init.copyAndProcess(files, props);

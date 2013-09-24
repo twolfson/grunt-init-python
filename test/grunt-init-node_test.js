@@ -48,7 +48,7 @@ describe('An UNLICENSE init', function () {
   it('actual directory matches expected directory', function (done) {
     // Walk the actual directory
     var finder = findit(this.actualDir);
-    finder.on('file', function (filepath, stat) {
+    finder.on('file', function (filepath, stats) {
       // Load in the files
       var actualFile = fs.readFileSync(filepath, 'utf8'),
           expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
@@ -64,13 +64,10 @@ describe('An UNLICENSE init', function () {
 
   it('expected directory does not have more files than actual directory', function (done) {
     var finder = findit(this.expectedDir);
-    finder.on('file', function (filepath, stat) {
-      // Load in the file
+    finder.on('file', function (filepath, stats) {
+      // Get the stats of the actual file (error will throw if non-existant)
       var actualFilepath = filepath.replace('/expected_files/', '/actual_files/'),
-          actualFile = fs.readFileSync(actualFilepath, 'utf8');
-
-      // Assert their content is equal
-      assert.strictEqual(expectedFile, actualFile, 'Content of "' + filepath + '" did not match as expected');
+          actualStats = fs.statSync(actualFilepath);
     });
     finder.on('end', done);
   });
