@@ -1,4 +1,4 @@
-# grunt-init-node
+# grunt-init-node [![Build status](https://travis-ci.org/twolfson/grunt-init-node.png?branch=master)](https://travis-ci.org/twolfson/grunt-init-node)
 
 > Create a Node.js module with [grunt-init][], including mocha unit tests.
 
