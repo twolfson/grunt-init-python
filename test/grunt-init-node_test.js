@@ -1,6 +1,7 @@
 // Load in depdendencies
 var assert = require('assert'),
     fs = require('fs'),
+    grunt = require('grunt'),
     suppose = require('suppose'),
     rimraf = require('rimraf'),
     mkdirp = require('mkdirp'),
@@ -53,6 +54,12 @@ describe('An UNLICENSE init', function () {
       var actualFile = fs.readFileSync(filepath, 'utf8'),
           expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
           expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
+
+      // If the file is UNLICENSE, template out expectedFile
+      if (filepath.match(/\/UNLICENSE$/)) {
+        console.log('its a match');
+        expectedFile = grunt.template.process(expectedFile, {grunt: grunt});
+      }
 
       // Assert their content is equal
       assert.strictEqual(actualFile, expectedFile, 'Content of "' + filepath + '" did not match as expected');
