@@ -1,7 +1,7 @@
 {
   "name": "grunt-init-node",
   "description": "Boilerplate for node module via `grunt-init`",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "homepage": "https://github.com/twolfson/grunt-init-node",
   "repository": {
     "type": "git",
