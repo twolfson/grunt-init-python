@@ -93,7 +93,7 @@ exports.template = function(grunt, init, done) {
     // If an unlicense was found, add it to output
     if (props.unlicense) {
       files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
-      props.licenses = ['UNLICENSE'];
+      props.licenses = [];
     } else {
       // Add properly-named license files.
       init.addLicenseFiles(files, props.licenses);
@@ -103,7 +103,18 @@ exports.template = function(grunt, init, done) {
     init.copyAndProcess(files, props);
 
     // Generate package.json file.
-    init.writePackageJSON('package.json', props);
+    init.writePackageJSON('package.json', props, function (pkg) {
+      // If there was UNLICENSE, add it as a license
+      if (props.unlicense) {
+        pkg.licenses.push({
+          type: 'UNLICENSE',
+          url: props.homepage + '/blob/master/UNLICENSE'
+        });
+      }
+
+      // Return the package
+      return pkg;
+    });
 
     // All done!
     done();

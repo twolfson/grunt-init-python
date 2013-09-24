@@ -18,7 +18,7 @@
   "licenses": [
     {
       "type": "UNLICENSE",
-      "url": "https://github.com/twolfson/value-mapper/blob/master/UNLICENSE"
+      "url": "http://abc/blob/master/UNLICENSE"
     }
   ],
   "main": "lib/test-unlicense",
