@@ -13,6 +13,7 @@ describe('An UNLICENSE init', function () {
     process.chdir(testDir);
 
     // Run the grunt-init script inside of the test directory
+    // TODO: Consider how to convert this to a flat file
     suppose('grunt-init', ['node'])
       .debug(process.stdout)
       .on(/Project name/).respond('test-unlicense\n')
