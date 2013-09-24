@@ -1,0 +1,24 @@
+{
+  "name": "grunt-init-node",
+  "description": "Boilerplate for node module via `grunt-init`",
+  "version": "0.3.1",
+  "homepage": "https://github.com/twolfson/grunt-init-node",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twolfson/grunt-init-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twolfson/grunt-init-node/issues"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.11.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.4.0"
+  },
+  "keywords": [],
+  "private": true
+}
