@@ -1,16 +1,22 @@
 // Load in depdendencies
 var assert = require('assert'),
+    fs = require('fs'),
     suppose = require('suppose'),
     rimraf = require('rimraf'),
-    mkdirp = require('mkdirp');
+    mkdirp = require('mkdirp'),
+    findit = require('findit');
 
 describe('An UNLICENSE init', function () {
   before(function (done) {
     // Relocate to the test directory
-    var testDir = __dirname + '/actual_files/unlicense';
-    rimraf.sync(testDir);
-    mkdirp.sync(testDir);
-    process.chdir(testDir);
+    var actualDir = __dirname + '/actual_files/unlicense';
+    rimraf.sync(actualDir);
+    mkdirp.sync(actualDir);
+    process.chdir(actualDir);
+
+    // Save test dirs for later
+    this.actualDir = actualDir;
+    this.expectedDir = __dirname + '/expected_files/unlicense';
 
     // Run the grunt-init script inside of the test directory
     // TODO: Consider how to convert this to a flat file
@@ -39,7 +45,33 @@ describe('An UNLICENSE init', function () {
       });
   });
 
-  it('matches expected directory', function () {
-    assert(true);
+  it('actual directory matches expected directory', function (done) {
+    // Walk the actual directory
+    var finder = findit(this.actualDir);
+    finder.on('file', function (filepath, stat) {
+      // Load in the files
+      var actualFile = fs.readFileSync(filepath, 'utf8'),
+          expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
+          expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
+
+      // Assert their content is equal
+      assert.strictEqual(actualFile, expectedFile, 'Content of "' + filepath + '" did not match as expected');
+    });
+
+    // When we are done, callback
+    finder.on('end', done);
+  });
+
+  it('expected directory does not have more files than actual directory', function (done) {
+    var finder = findit(this.expectedDir);
+    finder.on('file', function (filepath, stat) {
+      // Load in the file
+      var actualFilepath = filepath.replace('/expected_files/', '/actual_files/'),
+          actualFile = fs.readFileSync(actualFilepath, 'utf8');
+
+      // Assert their content is equal
+      assert.strictEqual(expectedFile, actualFile, 'Content of "' + filepath + '" did not match as expected');
+    });
+    finder.on('end', done);
   });
 });
