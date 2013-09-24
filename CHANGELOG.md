@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.4.1 - Fixed failing tests in Travis CI
+
 0.4.0 - Added tests, Travis CI, and fixed UNLICENSE not showing in package.json
 
 0.3.1 - Corrected trailing README whitespace
