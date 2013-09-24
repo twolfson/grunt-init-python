@@ -32,7 +32,7 @@ describe('An UNLICENSE init', function () {
       .on(/Author name/).respond('Todd Wolfson\n')
       .on(/Author email/).respond('todd@twolfson.com\n')
       .on(/Author url/).respond('http://twolfson.com/\n')
-      .on(/Gittip username/).respond('\n')
+      .on(/Gittip username/).respond('twolfson\n')
       .on(/What versions of node/).respond('>= 0.8.0\n')
       .on(/Main module\/entry point/).respond('lib/test-unlicense\n')
       .on(/Npm test command/).respond('mocha\n')
