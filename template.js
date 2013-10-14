@@ -49,7 +49,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('download_url', function (defaultt, props, cb) {
       cb(null, defaultt !== 'none' ? defaultt : props.homepage + '/archive/master.zip');
     }),
-    init.prompt('licenses', 'Unlicense'),
+    init.prompt('licenses', 'UNLICENSE'),
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
@@ -64,10 +64,13 @@ exports.template = function(grunt, init, done) {
     var keywords = props.keywords;
     keywords = keywords ? keywords.split(',') : [];
 
-    // Trim each keyword and save
+    // Trim each keyword
     keywords = keywords.map(function (str) {
       return str.trim();
     });
+
+    // Combine keywords for setup.py and save
+    keywords = JSON.stringify(keywords, null, 8).replace(/"/g, "'");
     props.keywords = keywords;
 
     // Escape the name to Python package standards
@@ -83,13 +86,12 @@ exports.template = function(grunt, init, done) {
 
     // If the licenses contain an Unlicense, pluck it
     props.unlicense = props.licenses.filter(function (license) {
-      return license.match(/^Unlicense$/i);
+      return license.match(/^UNLICENSE$/i);
     })[0];
 
     // If an unlicense was found, add it to output
     if (props.unlicense) {
       files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
-      props.licenses = [];
     } else {
       // Add properly-named license files.
       init.addLicenseFiles(files, props.licenses);
