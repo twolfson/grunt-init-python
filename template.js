@@ -74,6 +74,9 @@ exports.template = function(grunt, init, done) {
     props.package_name = props.name.replace(/[ \-]/g, '_');
 
     // Create an underlining function
+    props.underline = function (sentence, underline) {
+      return sentence.replace(/./g, underline);
+    };
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);

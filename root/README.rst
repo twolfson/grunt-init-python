@@ -1,5 +1,5 @@
 {%= name %}
-==
+{%= underline(name, '=') %}
 
 .. image:: https://travis-ci.org/{%= travis_username %}/test-unlicense.png?branch=master
    :target: https://travis-ci.org/{%= travis_username %}/test-unlicense
