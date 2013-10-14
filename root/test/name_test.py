@@ -1,11 +1,6 @@
-var {%= js_safe_name %} = require('../lib/{%= name %}.js');
+from unittest import TestCase
+from {%= package_name %} import run
 
-describe('{%= name %}', function () {
-  before(function () {
-
-  });
-
-  it('', function () {
-
-  });
-});
+class TestRunFunction(TestCase):
+    def run_exists(self):
+        self.assertTrue(run)
