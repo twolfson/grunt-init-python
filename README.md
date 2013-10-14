@@ -11,6 +11,7 @@ Boilerplate template for [Python][] projects via [grunt-init][]. Highlights are:
 
 This was forked from [twolfson/grunt-init-node][].
 
+[Python]: http://www.python.org/
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [unlicense-site]: http://unlicense.org/
 [gittip]: https://www.gittip.com/
