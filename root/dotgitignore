@@ -1,1 +1,4 @@
-node_modules/
+*.pyc
+build/
+dist/
+{%= package_name %}.egg-info

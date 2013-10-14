@@ -34,8 +34,8 @@ describe('An UNLICENSE init', function () {
       .on(/Author name/).respond('Todd Wolfson\n')
       .on(/Author email/).respond('todd@twolfson.com\n')
       .on(/Author url/).respond('http://twolfson.com/\n')
-      .on(/Gittip username/).respond('twolfson\n')
       .on(/Travis CI username/).respond('twolfson\n')
+      .on(/Gittip username/).respond('twolfson\n')
       // TODO: https://pypi.python.org/pypi?%3Aaction=list_classifiers
       .on(/What keywords/).respond('a, b, c\n')
       .on(/any changes/).respond('n\n')

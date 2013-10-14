@@ -1,5 +1,5 @@
 {
-  "lib/name.js": "lib/{%= name %}.js",
-  "test/name_test.js": "test/{%= name %}_test.js",
+  "lib/name.py": "lib/{%= name %}.py",
+  "test/name_test.py": "test/{%= name %}_test.py",
   "dotgitignore": ".gitignore"
 }
