@@ -2,21 +2,19 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='sublime_plugin_tests',
-    version='0.4.0',
-    description='Testing framework for Sublime Text plugins',
+    name='test_unlicense',
+    version='9.0.0',
+    description='Unlicense test project',
     long_description=open('README.rst').read(),
     keywords=[
-        'sublime text',
-        'plugin',
-        'test',
-        'framework',
-        'tdd'
+        'a',
+        'b',
+        'c'
     ],
     author='Todd Wolfson',
     author_email='todd@twolfson.com',
-    url='https://github.com/twolfson/sublime-plugin-tests',
-    download_url='https://github.com/twolfson/sublime-plugin-tests/archive/master.zip',
+    url='http://abc',
+    download_url='http://abc/archive/master.zip',
     packages=find_packages(),
     license='UNLICENSE',
     install_requires=open('requirements.txt').readlines(),
