@@ -22,7 +22,7 @@ describe('An UNLICENSE init', function () {
     // Run the grunt-init script inside of the test directory
     // TODO: Consider how to convert this to a flat file
     // TODO: Notify user about updating classifiers and activating Travis CI
-    suppose('grunt-init', ['node'])
+    suppose('grunt-init', ['python'])
       .debug(process.stdout)
       .on(/Project name/).respond('test-unlicense\n')
       .on(/Description/).respond('Unlicense test project\n')
@@ -35,7 +35,7 @@ describe('An UNLICENSE init', function () {
       .on(/Author email/).respond('todd@twolfson.com\n')
       .on(/Author url/).respond('http://twolfson.com/\n')
       .on(/Gittip username/).respond('twolfson\n')
-      .on(/Travis CI/).respond('y\n')
+      .on(/Travis CI username/).respond('twolfson\n')
       // TODO: https://pypi.python.org/pypi?%3Aaction=list_classifiers
       .on(/What keywords/).respond('a, b, c\n')
       .on(/any changes/).respond('n\n')
