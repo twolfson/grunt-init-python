@@ -38,7 +38,6 @@ Support this project and `others by {%= gittip_username %}`_ via `gittip`_.
 
 .. _`others by {%= gittip_username %}`:
 .. _gittip: https://www.gittip.com/{%= gittip_username %}/
-
 {% } %}{% if (unlicense) { %}
 Unlicense
 ---------
