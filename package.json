@@ -1,14 +1,14 @@
 {
-  "name": "grunt-init-node",
-  "description": "Boilerplate for node module via `grunt-init`",
-  "version": "0.4.1",
-  "homepage": "https://github.com/twolfson/grunt-init-node",
+  "name": "grunt-init-python",
+  "description": "Boilerplate for python module via `grunt-init`",
+  "version": "0.1.0",
+  "homepage": "https://github.com/twolfson/grunt-init-python",
   "repository": {
     "type": "git",
-    "url": "git://github.com/twolfson/grunt-init-node.git"
+    "url": "git://github.com/twolfson/grunt-init-python.git"
   },
   "bugs": {
-    "url": "https://github.com/twolfson/grunt-init-node/issues"
+    "url": "https://github.com/twolfson/grunt-init-python/issues"
   },
   "scripts": {
     "test": "mocha"
