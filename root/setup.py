@@ -6,7 +6,9 @@ setup(
     version='{%= version %}',
     description='{%= description %}',
     long_description=open('README.rst').read(),
-    keywords={%= keywords %},
+    keywords=[
+        {%= keywords %}
+    ],
     author='Todd Wolfson',
     author_email='todd@twolfson.com',
     url='{%= homepage %}',

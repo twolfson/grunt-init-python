@@ -70,7 +70,9 @@ exports.template = function(grunt, init, done) {
     });
 
     // Combine keywords for setup.py and save
-    keywords = JSON.stringify(keywords, null, 8).replace(/"/g, "'");
+    keywords = keywords.map(function (keyword) {
+      return JSON.stringify(keyword).replace(/"/g, "'");
+    }).join(',\n        ');
     props.keywords = keywords;
 
     // Escape the name to Python package standards
