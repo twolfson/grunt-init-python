@@ -71,7 +71,9 @@ exports.template = function(grunt, init, done) {
     props.keywords = keywords;
 
     // Escape the name to Python package standards
-    props.package_name = props.name.replace(/ -/g, '_');
+    props.package_name = props.name.replace(/[ \-]/g, '_');
+
+    // Create an underlining function
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);

@@ -1,15 +1,20 @@
 {%= name %}
 ==
 
+.. image:: https://travis-ci.org/{%= travis_username %}/test-unlicense.png?branch=master
+   :target: https://travis-ci.org/{%= travis_username %}/test-unlicense
+   :alt: Build Status
+
 {%= description %}
 
-## Getting Started
+Getting Started
+---------------
 Install the module with: ``pip install {%= package_name %}``
 
-```javascript
-var {%= js_safe_name %} = require('{%= name %}');
-{%= js_safe_name %}.awesome(); // "awesome"
-```
+.. code:: python
+
+    from {%= package_name %} import run
+    run()
 
 Documentation
 -------------
@@ -25,20 +30,23 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 {% if (gittip_username) { %}
 Donating
 --------
-Support this project and [others by {%= gittip_username %}][gittip] via [gittip][].
+Support this project and `others by {%= gittip_username %}`_ via `gittip`_.
 
-[![Support via Gittip][gittip-badge]][gittip]
+.. image:: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+   :target: `gittip`_
+   :alt: Support via Gittip
 
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/{%= gittip_username %}/
+.. _`others by {%= gittip_username %}`:
+.. _gittip: https://www.gittip.com/{%= gittip_username %}/
+
 {% } %}{% if (unlicense) { %}
 Unlicense
 ---------
 As of {%= grunt.template.today('mmm dd yyyy') %}, {%= author_name %} has released this repository and its contents to the public domain.
 
-It has been released under the [UNLICENSE][].
+It has been released under the `UNLICENSE`_.
 
-[UNLICENSE]: UNLICENSE{% } else if (licenses.length) { %}
+.. _UNLICENSE: {%= homepage %}/blob/master/UNLICENSE{% } else if (licenses.length) { %}
 License
 -------
 Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
