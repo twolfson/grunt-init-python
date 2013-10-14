@@ -1,1 +1,4 @@
-node_modules/
+*.pyc
+build/
+dist/
+test_unlicense.egg-info
