@@ -1,35 +1,48 @@
-# test-unlicense
+test-unlicense
+==============
+
+.. image:: https://travis-ci.org/twolfson/test-unlicense.png?branch=master
+   :target: https://travis-ci.org/twolfson/test-unlicense
+   :alt: Build Status
 
 Unlicense test project
 
-## Getting Started
-Install the module with: `npm install test-unlicense`
+Getting Started
+---------------
+Install the module with: ``pip install test_unlicense``
 
-```javascript
-var test_unlicense = require('test-unlicense');
-test_unlicense.awesome(); // "awesome"
-```
+.. code:: python
 
-## Documentation
+    from test_unlicense import run
+    run()
+
+Documentation
+-------------
 _(Coming soon)_
 
-## Examples
+Examples
+--------
 _(Coming soon)_
 
-## Donating
-Support this project and [others by twolfson][gittip] via [gittip][].
+Contributing
+------------
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Test via ``nosetests``.
 
-[![Support via Gittip][gittip-badge]][gittip]
+Donating
+--------
+Support this project and `others by twolfson`_ via `gittip`_.
 
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/twolfson/
+.. image:: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+   :target: `gittip`_
+   :alt: Support via Gittip
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
+.. _`others by twolfson`:
+.. _gittip: https://www.gittip.com/twolfson/
 
-## Unlicense
-As of Sep 23 2013, Todd Wolfson has released this repository and its contents to the public domain.
+Unlicense
+---------
+As of Oct 14 2013, Todd Wolfson has released this repository and its contents to the public domain.
 
-It has been released under the [UNLICENSE][].
+It has been released under the `UNLICENSE`_.
 
-[UNLICENSE]: UNLICENSE
+.. _UNLICENSE: https://github.com/twolfson/test-unlicense/blob/master/UNLICENSE
