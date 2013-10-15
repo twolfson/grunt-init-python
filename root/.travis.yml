@@ -7,6 +7,9 @@ install:
   # Install `{%= package_name %}`
   - python setup.py develop
 
+  # Install dev requirements
+  - pip install -r requirements-dev.txt
+
 script:
   # Run our tests
   - ./test.sh

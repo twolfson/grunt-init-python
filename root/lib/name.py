@@ -1,2 +1,2 @@
-def {%= package_name %}():
+def run():
     pass

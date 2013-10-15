@@ -12,7 +12,6 @@ setup(
     author='Todd Wolfson',
     author_email='todd@twolfson.com',
     url='{%= homepage %}',
-    bugtrack_url='{%= bugs %}',
     download_url='{%= download_url %}',
     packages=find_packages(),
     license='{%= licenses %}',

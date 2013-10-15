@@ -1,6 +1,7 @@
 from unittest import TestCase
-from {%= package_name %} import run
+from {%= package_name %} import {%= package_name %}
+
 
 class TestRunFunction(TestCase):
-    def run_exists(self):
-        self.assertTrue(run)
+    def test_run_exists(self):
+        self.assertTrue(bool({%= package_name %}.run))
