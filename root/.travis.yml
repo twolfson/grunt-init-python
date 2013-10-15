@@ -1,0 +1,15 @@
+language: python
+python:
+  - "2.7"
+  - "3.3"
+
+install:
+  # Install `{%= package_name %}`
+  - python setup.py develop
+
+script:
+  # Run our tests
+  - ./test.sh
+
+notifications:
+  email: false
