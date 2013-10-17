@@ -6,6 +6,8 @@
  * Licensed under the MIT license.
  */
 
+var gruntInitGit = require('grunt-init/tasks/lib/git');
+
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
 
@@ -20,6 +22,7 @@ exports.warnOn = '*';
 
 // The actual init template.
 exports.template = function(grunt, init, done) {
+  var git = gruntInitGit.init(grunt);
 
   init.prompts.download_url = {
     name: 'download_url',
@@ -42,12 +45,22 @@ exports.template = function(grunt, init, done) {
     init.prompt('name'),
     init.prompt('description'),
     init.prompt('version'),
-    init.prompt('homepage'),
+    init.prompt('homepage', function (defaultt, props, cb) {
+      if (defaultt && defaultt !== 'none') {
+        return cb(null, defaultt);
+      }
+
+      // Grab the default git url and work from that
+      // TODO: Figure out how to lookup default repo
+      init.prompts.repository['default'](null, props, function (err, repository) {
+        cb(null, git.githubUrl(repository) || 'none');
+      });
+    }),
     init.prompt('bugs', function (defaultt, props, cb) {
-      cb(null, defaultt !== 'none' ? defaultt : props.homepage + '/issues');
+      cb(null, (defaultt && defaultt !== 'none') ? defaultt : props.homepage + '/issues');
     }),
     init.prompt('download_url', function (defaultt, props, cb) {
-      cb(null, defaultt !== 'none' ? defaultt : props.homepage + '/archive/master.zip');
+      cb(null, (defaultt && defaultt !== 'none') ? defaultt : props.homepage + '/archive/master.zip');
     }),
     init.prompt('licenses', 'UNLICENSE'),
     init.prompt('author_name'),
