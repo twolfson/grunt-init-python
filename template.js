@@ -6,6 +6,8 @@
  * Licensed under the MIT license.
  */
 
+var gruntInitGit = require('grunt-init/tasks/lib/git');
+
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
 
@@ -20,6 +22,7 @@ exports.warnOn = '*';
 
 // The actual init template.
 exports.template = function(grunt, init, done) {
+  var git = gruntInitGit.init(grunt);
 
   init.prompts.download_url = {
     name: 'download_url',
@@ -37,8 +40,6 @@ exports.template = function(grunt, init, done) {
     message: 'Gittip username (adds Gittip badge)'
   };
 
-  console.log(init);
-
   init.process({type: 'node'}, [
     // Prompt for these values.
     init.prompt('name'),
@@ -52,7 +53,7 @@ exports.template = function(grunt, init, done) {
       // Grab the default git url and work from that
       // TODO: Figure out how to lookup default repo
       init.prompts.repository['default'](null, props, function (err, repository) {
-        done(null, git.githubUrl(repository) || 'none');
+        cb(null, git.githubUrl(repository) || 'none');
       });
     }),
     init.prompt('bugs', function (defaultt, props, cb) {
