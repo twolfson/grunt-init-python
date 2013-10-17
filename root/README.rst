@@ -1,8 +1,8 @@
 {%= name %}
 {%= underline(name, '=') %}
 
-.. image:: https://travis-ci.org/{%= travis_username %}/{%= package_name %}.png?branch=master
-   :target: https://travis-ci.org/{%= travis_username %}/{%= package_name %}
+.. image:: https://travis-ci.org/{%= travis_username %}/{%= name %}.png?branch=master
+   :target: https://travis-ci.org/{%= travis_username %}/{%= name %}
    :alt: Build Status
 
 {%= description %}
