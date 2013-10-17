@@ -37,17 +37,29 @@ exports.template = function(grunt, init, done) {
     message: 'Gittip username (adds Gittip badge)'
   };
 
+  console.log(init);
+
   init.process({type: 'node'}, [
     // Prompt for these values.
     init.prompt('name'),
     init.prompt('description'),
     init.prompt('version'),
-    init.prompt('homepage'),
+    init.prompt('homepage', function (defaultt, props, cb) {
+      if (defaultt && defaultt !== 'none') {
+        return cb(null, defaultt);
+      }
+
+      // Grab the default git url and work from that
+      // TODO: Figure out how to lookup default repo
+      init.prompts.repository['default'](null, props, function (err, repository) {
+        done(null, git.githubUrl(repository) || 'none');
+      });
+    }),
     init.prompt('bugs', function (defaultt, props, cb) {
-      cb(null, defaultt !== 'none' ? defaultt : props.homepage + '/issues');
+      cb(null, (defaultt && defaultt !== 'none') ? defaultt : props.homepage + '/issues');
     }),
     init.prompt('download_url', function (defaultt, props, cb) {
-      cb(null, defaultt !== 'none' ? defaultt : props.homepage + '/archive/master.zip');
+      cb(null, (defaultt && defaultt !== 'none') ? defaultt : props.homepage + '/archive/master.zip');
     }),
     init.prompt('licenses', 'UNLICENSE'),
     init.prompt('author_name'),
