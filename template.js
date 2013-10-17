@@ -6,7 +6,8 @@
  * Licensed under the MIT license.
  */
 
-var gruntInitGit = require('grunt-init/tasks/lib/git');
+var fs = require('fs'),
+    gruntInitGit = require('grunt-init/tasks/lib/git');
 
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
@@ -114,6 +115,9 @@ exports.template = function(grunt, init, done) {
 
     // Actually copy (and process) files.
     init.copyAndProcess(files, props);
+
+    // Make test.sh executable
+    fs.chmodSync('test.sh', 0755);
 
     // All done!
     done();
