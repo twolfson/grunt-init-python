@@ -1,4 +1,6 @@
 # grunt-init-python changelog
+1.0.1 - Dropped `node@0.8` testing from Travis CI
+
 1.0.0 - Moved from gittip-badge to gratipay-badge
 
 0.2.1 - Another iteration to fix edge cases
