@@ -30,14 +30,14 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 Donating
 --------
-Support this project and `others by twolfson`_ via `gittip`_.
+Support this project and `others by twolfson`_ via `gratipay`_.
 
-.. image:: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-   :target: `gittip`_
-   :alt: Support via Gittip
+.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+   :target: `gratipay`_
+   :alt: Support via Gratipay
 
 .. _`others by twolfson`:
-.. _gittip: https://www.gittip.com/twolfson/
+.. _gratipay: https://www.gratipay.com/twolfson/
 
 Unlicense
 ---------
