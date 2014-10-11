@@ -27,17 +27,17 @@ _(Coming soon)_
 Contributing
 ------------
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Test via ``nosetests``.
-{% if (gittip_username) { %}
+{% if (gratipay_username) { %}
 Donating
 --------
-Support this project and `others by {%= gittip_username %}`_ via `gittip`_.
+Support this project and `others by {%= gratipay_username %}`_ via `gratipay`_.
 
-.. image:: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-   :target: `gittip`_
-   :alt: Support via Gittip
+.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+   :target: `gratipay`_
+   :alt: Support via Gratipay
 
-.. _`others by {%= gittip_username %}`:
-.. _gittip: https://www.gittip.com/{%= gittip_username %}/
+.. _`others by {%= gratipay_username %}`:
+.. _gratipay: https://www.gratipay.com/{%= gratipay_username %}/
 {% } %}{% if (unlicense) { %}
 Unlicense
 ---------

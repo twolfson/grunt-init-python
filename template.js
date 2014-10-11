@@ -36,9 +36,9 @@ exports.template = function(grunt, init, done) {
     message: 'Travis CI username (adds Travis CI badge)'
   };
 
-  init.prompts.gittip_username = {
-    name: 'gittip_username',
-    message: 'Gittip username (adds Gittip badge)'
+  init.prompts.gratipay_username = {
+    name: 'gratipay_username',
+    message: 'Gratipay username (adds Gratipay badge)'
   };
 
   init.process({type: 'node'}, [
@@ -68,7 +68,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_email'),
     init.prompt('author_url'),
     init.prompt('travis_username'),
-    init.prompt('gittip_username'),
+    init.prompt('gratipay_username'),
     {
       name: 'keywords',
       message: 'What keywords relate to this plugin (comma separated)?'

@@ -6,7 +6,7 @@ Boilerplate template for [Python][] projects via [grunt-init][]. Highlights are:
 - Basic PyPI files are installed: `MANIFEST.in`, `setup.py`
 - `requirements` are broken out into `requirements.txt` for separate installation
 - Added [UNLICENSE][unlicense-site] to available licenses (default)
-- Include [gittip][] badge
+- Include [gratipay][] badge
 - Include [Travis CI][] badge
 
 This was forked from [twolfson/grunt-init-node][].
@@ -14,7 +14,7 @@ This was forked from [twolfson/grunt-init-node][].
 [Python]: http://www.python.org/
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [unlicense-site]: http://unlicense.org/
-[gittip]: https://www.gittip.com/
+[gratipay]: https://www.gratipay.com/
 [Travis CI]: https://travis-ci.org/
 [twolfson/grunt-init-node]: https://github.com/twolfson/grunt-init-node
 
