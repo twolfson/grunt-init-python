@@ -14,7 +14,6 @@ setup(
     author='Todd Wolfson',
     author_email='todd@twolfson.com',
     url='http://abc',
-    bugtrack_url='http://abc/issues',
     download_url='http://abc/archive/master.zip',
     packages=find_packages(),
     license='UNLICENSE',

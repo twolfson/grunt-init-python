@@ -1,6 +1,7 @@
 from unittest import TestCase
-from test_unlicense import run
+from test_unlicense import test_unlicense
+
 
 class TestRunFunction(TestCase):
-    def run_exists(self):
-        self.assertTrue(run)
+    def test_run_exists(self):
+        self.assertTrue(bool(test_unlicense.run))
