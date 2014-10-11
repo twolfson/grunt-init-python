@@ -1,6 +1,7 @@
 {
   "lib/__init__.py": "{%= package_name %}/__init__.py",
   "lib/name.py": "{%= package_name %}/{%= package_name %}.py",
-  "test/name_test.py": "test/{%= name %}_test.py",
+  "lib/test/__init__.py": "{%= package_name %}/test/__init__.py",
+  "lib/test/test.py": "{%= package_name %}/test/test.py",
   "dotgitignore": ".gitignore"
 }
