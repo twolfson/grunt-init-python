@@ -10,7 +10,7 @@ var fs = require('fs'),
     gruntInitGit = require('grunt-init/tasks/lib/git');
 
 // Basic template description.
-exports.description = 'Create a Node.js module, including mocha unit tests.';
+exports.description = 'Create a Python Package, including nose unit tests';
 
 // Template-specific notes to be displayed after question prompts.
 exports.after = [
