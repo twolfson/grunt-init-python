@@ -55,8 +55,8 @@ describe('An UNLICENSE init', function () {
           expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
           expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
 
-      // If the file is README.md, template out expectedFile
-      if (filepath.match(/\/README.md$/)) {
+      // If the file is README.rst, template out expectedFile
+      if (filepath.match(/\/README.rst$/)) {
         expectedFile = grunt.template.process(expectedFile, {grunt: grunt});
       }
 

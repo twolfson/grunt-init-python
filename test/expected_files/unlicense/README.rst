@@ -41,7 +41,7 @@ Support this project and `others by twolfson`_ via `gratipay`_.
 
 Unlicense
 ---------
-As of Oct 14 2013, Todd Wolfson has released this repository and its contents to the public domain.
+As of <%= grunt.template.today('mmm dd yyyy') %>, Todd Wolfson has released this repository and its contents to the public domain.
 
 It has been released under the `UNLICENSE`_.
 
