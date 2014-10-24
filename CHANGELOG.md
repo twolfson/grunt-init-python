@@ -1,4 +1,6 @@
 # grunt-init-python changelog
+2.1.0 - Fixed bug in CHANGELOG version
+
 2.0.0 - Moved to more pythonic structure
 
 1.0.2 - Fixed broken tests
