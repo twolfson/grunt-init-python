@@ -1,4 +1,5 @@
 *.pyc
 build/
 dist/
+node_modules/
 test_unlicense.egg-info
