@@ -1,4 +1,6 @@
 # grunt-init-python changelog
+2.2.0 - Added release script based on `foundry`
+
 2.1.0 - Fixed bug in CHANGELOG version
 
 2.0.0 - Moved to more pythonic structure
