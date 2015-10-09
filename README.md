@@ -8,6 +8,7 @@ Boilerplate template for [Python][] projects via [grunt-init][]. Highlights are:
 - Added [UNLICENSE][unlicense-site] to available licenses (default)
 - Include [gratipay][] badge
 - Include [Travis CI][] badge
+- Added release script based on `foundry`
 
 This was forked from [twolfson/grunt-init-node][].
 
