@@ -1,7 +1,7 @@
 test-unlicense
 ==============
 
-.. image:: https://travis-ci.org/twolfson/test-unlicense.png?branch=master
+.. image:: https://travis-ci.org/twolfson/test-unlicense.svg?branch=master
    :target: https://travis-ci.org/twolfson/test-unlicense
    :alt: Build Status
 
@@ -32,7 +32,7 @@ Donating
 --------
 Support this project and `others by twolfson`_ via `gratipay`_.
 
-.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
    :target: `gratipay`_
    :alt: Support via Gratipay
 

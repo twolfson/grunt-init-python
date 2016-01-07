@@ -1,4 +1,4 @@
-# grunt-init-python [![Build status](https://travis-ci.org/twolfson/grunt-init-python.png?branch=master)](https://travis-ci.org/twolfson/grunt-init-python)
+# grunt-init-python [![Build status](https://travis-ci.org/twolfson/grunt-init-python.svg?branch=master)](https://travis-ci.org/twolfson/grunt-init-python)
 
 Boilerplate template for [Python][] projects via [grunt-init][]. Highlights are:
 

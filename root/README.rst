@@ -1,7 +1,7 @@
 {%= name %}
 {%= underline(name, '=') %}
 
-.. image:: https://travis-ci.org/{%= travis_username %}/{%= name %}.png?branch=master
+.. image:: https://travis-ci.org/{%= travis_username %}/{%= name %}.svg?branch=master
    :target: https://travis-ci.org/{%= travis_username %}/{%= name %}
    :alt: Build Status
 
@@ -32,7 +32,7 @@ Donating
 --------
 Support this project and `others by {%= gratipay_username %}`_ via `gratipay`_.
 
-.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
    :target: `gratipay`_
    :alt: Support via Gratipay
 
