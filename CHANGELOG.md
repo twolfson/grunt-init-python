@@ -1,4 +1,6 @@
 # grunt-init-python changelog
+2.4.0 - Added `sudo: false` to `.travis.yml`
+
 2.3.0 - Moved from PNG to SVG for images
 
 2.2.0 - Added release script based on `foundry`
