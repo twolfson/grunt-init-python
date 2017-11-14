@@ -27,17 +27,15 @@ _(Coming soon)_
 Contributing
 ------------
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Test via ``nosetests``.
-{% if (gratipay_username) { %}
+{% if (include_donations) { %}
 Donating
 --------
-Support this project and `others by {%= gratipay_username %}`_ via `gratipay`_.
+Support this project and `others by twolfson`_ via `donations`_.
 
-.. image:: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
-   :target: `gratipay`_
-   :alt: Support via Gratipay
+http://twolfson.com/support-me
 
-.. _`others by {%= gratipay_username %}`:
-.. _gratipay: https://www.gratipay.com/{%= gratipay_username %}/
+.. _`others by twolfson`: http://twolfson.com/projects
+.. _donations: http://twolfson.com/support-me
 {% } %}{% if (unlicense) { %}
 Unlicense
 ---------
